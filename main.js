@@ -1,23 +1,34 @@
 $(document).ready(function() {
+    let countTask = 1;
+
     $('header button').click(function() {
-        $('form').slideDown()
-    } );
+        $('form').slideDown();
+    });
 
     $('#bt-cancelar').click(function() {
         $('form').slideUp();
-    })
-
-    $('form').on('submit' , function(e) {
-        e.preventDefault();
-        const enderecoNovaImagem = $('#endereco-nova-imagem').val();
-        const novoItem = $('<li style="display: none;"></li>')
-        $(`<img src="${enderecoNovaImagem}" alt="Imagem"/>`).appendTo(novoItem);
-        $(`<div class="overlay-imagem-link">
-            <a href="${enderecoNovaImagem}" title="Ver Imagem em tamanho real" target="_blank">Ver Imagem em tamanho real</a>
-            </div>
-        `).appendTo(novoItem);
-        $(novoItem).appendTo('ul');
-        $(novoItem).fadeIn(500);
-        $('#endereco-nova-imagem').val('');
     });
-})
+
+    $('form').on('submit', function(e) {
+        e.preventDefault();
+        const digitarNovaTarefa = $('#nova-tarefa').val();
+        if (digitarNovaTarefa.trim() !== '') {
+            const novoItem = $('<li></li>').hide(); 
+            const textoTarefa = $('<span></span>').text(`${countTask} - ${digitarNovaTarefa}`);
+            novoItem.append(textoTarefa);
+            countTask++;
+            $('ul').append(novoItem);
+            novoItem.slideDown();
+            $('#nova-tarefa').val('');
+        }
+    });
+
+    $('ul').on('click', 'li', function() {
+        const textoTarefa = $(this).find('span');
+        textoTarefa.toggleClass('completed');
+    });
+    $('#limpar-itens').click(function() {
+        $('ul').empty();
+        countTask = 1;
+    });
+});

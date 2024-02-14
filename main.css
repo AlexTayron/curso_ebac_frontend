@@ -5,6 +5,22 @@
     font-family: Roboto, sans-serif;
 }
 
+:root {
+    --bg-primary-color: #E7E7E7;
+    --bg-secondary-color: #1361b9;
+    --bg-tertiary-color: #13c950;
+    --text-primary-color: #282828;
+    --text-secondary-color: #E7E7E7;
+    --button-secondary-color: #eb7b13;
+    --border-primary-color: rgba(0, 0, 0, 0.1);
+    --table-primary-color: #cbe4e9;
+
+    --large-font-size: 2.5rem;
+    --medium-font-size: 1.2rem;
+    --normal-font-size: 1.125rem;
+}
+
+
 header{
     background-color: #5f27cd;
     padding: 16px 0;
@@ -15,20 +31,53 @@ header{
     text-transform: uppercase;
     font-style: italic;
 }
-
+header h1 {
+    font-size: var(--large-font-size);
+    font-weight: bold;
+    color: var(--text-secondary-color);
+}
 header button{
     margin-left: 16px;
+    border-radius: 5px;
 }
 
 form{
     background-color: #c8d6e5;
-    padding: 24px 0;
     text-align: center;
-    display: none;
+    margin-bottom: 25px;
+    max-width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+form input,
+form button {
+    padding: .5rem;
+    font-size: var(--normal-font-size);
+    border: none;
+    border-radius: 6px;
+    margin-block: 8px;
+}
+
+form button {
+    background-color: var(--bg-tertiary-color);
+    color: var(--text-secondary-color);
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 form h2{
     margin-bottom: 16px;
+}
+.container {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 input, button{
@@ -43,40 +92,43 @@ button{
     text-transform: uppercase;
     color: #fff;
 }
+#nova-tarefa{
+    text-align: center;
+}
+
 #bt-cancelar{
     background-color: red;
 }
 
-ul{
-    display: flex;
-    flex-wrap: wrap;
+#container-tarefas {
+    width: 100%;
+    background-color: var(--bg-primary-color);
+    color: var(--bg-secondary-color);
+    font-weight: bold;
+    border-radius: 0 0 8px 8px;
+    text-align: center;
+    padding: 1rem;
 }
-ul li {
-    width: 25%;
-    list-style: none;
+
+.content ul {
+    color: #341f97;
+    border-bottom: 2px solid var(--text-secondary-color);
+    padding: 1.3rem;
+    font-size: var(--medium-font-size);
+    font-weight: bold;
+}
+
+.content ul li {
+    width: 100%;
+    height: 30px;
+    margin: 0 10%;
     position: relative;
-    height: 280px;
-    overflow-y: hidden;
+    font-size: var(--normal-font-size);
+    text-align: start;
+    list-style: none;
+    cursor: pointer;
 }
 
-ul li img{
-    width: 100%;
-}
-
-.overlay-imagem-link{
-    padding: 16px;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    transition: all ease .5s;
-}
-.overlay-imagem-link a{
-    color: #fff;
-    text-decoration: none;
-}
-ul li:hover .overlay-imagem-link{
-    opacity: 1;
+.completed {
+    text-decoration: line-through;
 }
