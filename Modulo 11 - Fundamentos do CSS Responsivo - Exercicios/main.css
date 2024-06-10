@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header,
+footer {
+    background-color: #192456;
+    padding-top: 16px;
+    color: #fff;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header > .container,
+footer > .container {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+.container ul {
+    padding: 16px 0;
+    display: flex;
+}
+
+.list-itens li {
+    list-style: none;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.list-itens li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container-flex {
+    display: flex;
+}
+
+#sobre-a-loja img {
+    max-width: 400px;
+    margin-right: 24px;
+}
+
+.lista-guitarras {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section {
+    padding: 48px 0;
+}
+
+section h2 {
+    margin-bottom: 16px;
+}
+
+.lista-guitarras li {
+    list-style: none;
+    max-width: 23%;
+    margin-bottom: 24px;
+    box-sizing: border-box;
+}
+
+.lista-guitarras li img {
+    max-width: 100%;
+    height: auto;
+    width: 200px;
+}
+
+.lista-guitarras li h3 {
+    margin: 16px 0;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #3868d6;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.price {
+    margin: 16px 0;
+    display: block;
+}
+
+.price del {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.item-central {
+    margin: 0 auto; 
+    max-width: 200px; 
+}
+
+.form-campo {
+    margin-bottom: 16px;
+}
+
+.form-campo label {
+    font-weight: bold;
+    display: block;
+}
+
+.form-campo input,
+.form-campo textarea {
+    width: 100%;
+    display: block;
+    padding: 8px;
+}
+
+.form-campo textarea {
+    resize: none;
+    height: 120px;
+}
+
+form {
+    max-width: 360px;
+}
+
+form button {
+    max-width: 320px;
+}
+
+footer li {
+    list-style: none;
+    margin-left: 16px;
+}
+
+footer li img {
+    height: 32px;
+}
+
+@media (max-width: 1023px) and (min-width: 641px) {
+    h2 {
+        padding: 0 16px;
+    }
+
+    header > .list-itens {
+        padding: 0 16px;
+    }
+
+    #sobre-a-loja .container-flex {
+        flex-direction: column;
+        text-align: center;
+        padding: 16px;
+    }
+    p {  
+        text-align: justify;
+    }
+
+    #sobre-a-loja img {
+        max-width: 100%;
+        margin-bottom: 24px;
+        align-self: center;
+        padding: 16px;
+    }
+
+    .lista-guitarras {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 16px;
+    }
+
+    .lista-guitarras li {
+        padding: 16px;
+        box-sizing: border-box;
+        margin-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 50%;
+    }
+
+    hr {
+        height: 1px;
+        margin: 16px 0;
+        background-color: #ccc;
+        border: none;
+    }
+
+    footer > .container-flex {
+        padding-right: 16px;
+    }
+}
+
+@media (max-width: 640px){
+
+    h1 {
+        padding-left: 16px;
+        font-size: 36px;
+    }
+
+    h2 {
+        padding: 0 16px;
+    }
+
+    header {
+        padding-top: 10px;
+    }
+
+    header > .list-itens {
+        padding-left: 16px;
+    }
+
+    .list-itens {
+        display: block;
+        padding-left: 20px;
+        flex-direction: column;
+    }
+
+    .list-itens li {
+        display: block;
+    }
+
+    section {
+        text-align: center;
+    }
+
+    #sobre-a-loja .container-flex {
+        flex-direction: column;
+        text-align: center; 
+        padding: 16px;
+    }
+
+    #sobre-a-loja img {
+        max-width: 100%;
+        margin-bottom: 24px;
+        align-self: center;
+        padding: 16px;
+    }
+    p {  
+        text-align: justify;
+    }
+
+    .lista-guitarras {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 16px;
+    }
+
+    .lista-guitarras li {
+        padding: 16px;
+        box-sizing: border-box;
+        margin-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    hr {
+        height: 1px;
+        margin: 16px 0;
+        background-color: #ccc;
+        border: none;
+    }
+
+    footer > .container-flex {
+        padding-right: 16px;
+    }
+}
