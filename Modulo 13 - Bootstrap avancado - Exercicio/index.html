@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEMA TOTAL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <style>
+
+    </style>
+</head>
+
+<body class="dark">
+    <!-- Navbar -->
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1>CINEMA TOTAL</h1>
+                <button id="hamb" data-bs-toggle="collapse" data-bs-target="#menu" type="button" class="navbar-toggler">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ingressos">Ingressos</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Carousel de Imagens -->
+    <div class="container">
+        <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div data-bs-interval="3000" class="carousel-item active">
+                    <picture>
+                        <source media="(max-width: 575px)" srcset="images/bandida_medio.jpg">
+                        <source media="(max-width: 768px)" srcset="images/bandida_medio.jpg">
+                        <img src="images/banner_Desktop_bandida_1312x440px.webp" alt="Bandida">
+                    </picture>
+                    <div class="card-overlay position-absolute top-50 start-0 translate-middle-y p-3"
+                        style="bottom: 60%; background-color: transparent;">
+                        <h1 class="text-white text-start">BANDIDA: A NÚMERO UM DA ROCINHA</h1>
+                        <p class="text-white text-start">DIA 26/06 NOS CINEMAS</p>
+                        <div class="text-start">
+                            <a href="#ingressos" class="btn btn-warning">Comprar agora</a>
+                        </div>
+                    </div>
+                </div>
+                <div data-bs-interval="3000" class="carousel-item">
+                    <picture>
+                        <source media="(max-width: 575px)" srcset="images/assassinos_medio.webp">
+                        <source media="(max-width: 768px)" srcset="images/assassinos_medio.webp">
+                        <img src="images/banner_Desktop_assassinoporacaso_1312x440px.webp" alt="Bandida">
+                    </picture>
+                    <div class="card-overlay position-absolute top-50 start-0 translate-middle-y p-3"
+                        style="bottom: 60%; background-color: transparent;">
+                        <h1 class="text-dark text-start">ASSASSINO POR ACASO</h1>
+                        <p class="text-dark text-start">DIA 26/06 NOS CINEMAS</p>
+                        <div class="text-start">
+                            <a href="#ingressos" class="btn btn-danger">Comprar agora</a>
+                        </div>
+                    </div>
+                </div>
+                <div data-bs-interval="3000" class="carousel-item">
+                    <div class="position-relative">
+                        <picture>
+                            <source media="(max-width: 575px)" srcset="images/dm_p.jpg">
+                            <source media="(max-width: 768px)" srcset="images/dm_medio.webp">
+                            <img src="images/banner_Desktop_prevendadivertidamente2_1312x440px.webp" alt="Bandida">
+                        </picture>
+                        <div id="divert" class="card-overlay position-absolute top-50 start-0 translate-middle-y p-3"
+                            style="bottom: 60%; background-color: transparent;">
+                            <h1 class="text-dark text-start">DIVERTIDAMENTE 2</h1>
+                            <p class="text-dark text-start">DIA 26/06 NOS CINEMAS</p>
+                            <div class="text-start">
+                                <a href="#ingressos" class="btn btn-primary">Comprar agora</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-exemplo" class="active indicador-custom"
+                    data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" class="indicador-custom"
+                    data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" class="indicador-custom"
+                    data-bs-slide-to="2"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grid Layout -->
+    <section id="ingressos">
+        <div class="container mt-5">
+            <h1 class="text-white">INGRESSOS</h1>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card" style="background-color: #565454;border-color: #565454;color:#fff;">
+                        <img src="images/bad-boys-ate-o-fim-poster-desktop-5799c.webp" class="card-img-top"
+                            alt="bad boys 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Bad Boys: Até o fim</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-warning" id="btn-checar-compra1">Comprar Ingresso</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card" style="background-color: #565454;border-color: #565454;color:#fff;">
+                        <img src="images/planeta-dos-macacos-o-reinado-poster-desktop-5821c.webp" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Planeta dos macacos: O Reinado</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-warning" id="btn-checar-compra2">Comprar Ingresso</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card" style="background-color: #565454;border-color: #565454;color:#fff;">
+                        <img src="images/um-lugar-silencioso-dia-um-poster-desktop-5868c.webp" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Um Lugar silencioso: Dia Um</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-warning" id="btn-checar-compra3">Comprar Ingresso</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card" style="background-color: #565454;border-color: #565454;color:#fff;">
+                        <img src="images/a-grande-fuga-poster-desktop-5925c.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">A Grande Fuga</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-warning" id="btn-checar-compra4">Comprar Ingresso</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card" style="background-color: #565454;border-color: #565454;color:#fff;">
+                        <img src="images/bad-boys-ate-o-fim-poster-desktop-5799c.webp" class="card-img-top"
+                            alt="bad boys 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Bad Boys: Até o fim</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-warning" id="btn-checar-compra1">Comprar Ingresso</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card" style="background-color: #565454;border-color: #565454;color:#fff;">
+                        <img src="images/planeta-dos-macacos-o-reinado-poster-desktop-5821c.webp" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Planeta dos macacos: O Reinado</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-warning" id="btn-checar-compra2">Comprar Ingresso</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div data-bs-autohide="false" class="toast" id="mensagensAlerta">
+            <div class="toast-header">
+                <strong class="me-auto">Importante</strong>
+            </div>
+            <div class="toast-body">
+                No momento não estamos online
+                <div class="mt-2 pt-2 border-top">
+                    <button data-bs-dismiss="toast" class="btn btn-danger">Descartar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="blog-footer mt-5 text-white text-center p-3" style="background-color: black;">
+        <h5>CINEMA TOTAL</h5>
+        <ul style="list-style-type: none; padding: 0; margin: 0;">
+            <li><a href="#" class="text-white" style="text-decoration: none;">HOME</a></li>
+            <li><a href="#" class="text-white" style="text-decoration: none;">INGRESSOS</a></li>
+        </ul>
+        <p>
+            Todos os direitos reservados
+        </p>
+    </footer>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const mensagem = document.getElementById('mensagensAlerta');
+
+        function showToast() {
+            const toast = new bootstrap.Toast(mensagem);
+            toast.show();
+        }
+
+        document.addEventListener('click', function (event) {
+            switch (event.target.id) {
+                case 'btn-checar-compra1':
+                case 'btn-checar-compra2':
+                case 'btn-checar-compra3':
+                case 'btn-checar-compra4':
+                    showToast();
+                    break;
+            }
+        });
+    </script>
+</body>
+
+</html>

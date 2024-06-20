@@ -1,0 +1,101 @@
+.navbar-nav .nav-link.active {
+    color: #fff;
+    background-color: #ffca2c;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+.nav-link {
+    text-align: center;
+    color: #fff;
+}
+
+section {
+    background-color: #000;
+    padding-top: 70px;
+}
+
+header {
+    background-color: black;
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 600px;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.nav-item a {
+    color: #fff;
+}
+
+#carousel-exemplo {
+    height: 600px;
+    overflow: hidden;
+}
+
+.dark {
+    background: #000;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.toast-container {
+    z-index: 1055;
+}
+
+#hamb{
+    background-color: #fff;
+}
+
+.indicador-custom {
+    background-color: black !important;
+    width: 5px;
+    height: 1px;
+    border-radius: 5px;
+    background-color: #ff9900;
+    border: 1px solid #ff9900;
+    margin: 0 5px;
+}
+
+.indicador-custom.active {
+    background-color: #ffcc00;
+    border-color: #ffcc00;
+}
+
+.wrapper {
+    min-height: calc(100vh - 100px);
+    overflow-x: hidden;
+    position: relative;
+}
+
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    #divert h1, #divert p {
+        color: white !important;
+    }
+}
