@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEMA TOTAL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        .toast-container {
+            z-index: 1055;
+        }
+
+        .indicador-custom {
+            background-color: black !important;
+            width: 5px;
+            height: 1px;
+            border-radius: 5px;
+            background-color: #ff9900;
+            border: 1px solid #ff9900;
+            margin: 0 5px;
+        }
+
+        .indicador-custom.active {
+            background-color: #ffcc00;
+            border-color: #ffcc00;
+        }
+    </style>
+</head>
+
+<body class="dark">
+    <div class="container">
+        <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div data-bs-interval="3000" class="carousel-item active">
+                    <picture>
+                        <source media="(max-width: 575px)" srcset="images/banner_Mobile_bandida_576x220px.webp">
+                        <source media="(max-width: 768px)" srcset="images/banner_Tablet_bandida_768x300px.webp">
+                        <img src="images/banner_Desktop_bandida_1312x440px.webp" alt="Bandida">
+                    </picture>
+                    <div class="card-overlay position-absolute top-50 start-0 translate-middle-y p-3"
+                        style="bottom: 60%; background-color: transparent;">
+                        <h1 class="text-white text-start">BANDIDA: A NÚMERO UM DA ROCINHA</h1>
+                        <p class="text-white text-start">DIA 26/06 NOS CINEMAS</p>
+                        <div class="text-start">
+                            <a href="#ingressos" class="btn btn-warning">Comprar agora</a>
+                        </div>
+                    </div>
+                </div>
+                <div data-bs-interval="3000" class="carousel-item">
+                    <picture>
+                        <source media="(max-width: 575px)" srcset="images/banner_Mobile_assassinoporacaso_576x220px.webp">
+                        <source media="(max-width: 768px)" srcset="images/banner_Tablet_assassinoporacaso_768x300px.webp">
+                        <img src="images/banner_Desktop_assassinoporacaso_1312x440px.webp" alt="Assassino por Acaso">
+                    </picture>
+                    <div class="card-overlay position-absolute top-50 start-0 translate-middle-y p-3"
+                        style="bottom: 60%; background-color: transparent;">
+                        <h1 class="text-dark text-start">ASSASSINO POR ACASO</h1>
+                        <p class="text-dark text-start">DIA 26/06 NOS CINEMAS</p>
+                        <div class="text-start">
+                            <a href="#ingressos" class="btn btn-danger">Comprar agora</a>
+                        </div>
+                    </div>
+                </div>
+                <div data-bs-interval="3000" class="carousel-item">
+                    <picture>
+                        <source media="(max-width: 575px)" srcset="images/banner_Mobile_prevendadivertidamente2_576x220px.webp">
+                        <source media="(max-width: 768px)" srcset="images/banner_Tablet_prevendadivertidamente2_768x300px.webp">
+                        <img src="images/banner_Desktop_prevendadivertidamente2_1312x440px.webp" alt="Divertidamente 2">
+                    </picture>
+                    <div class="card-overlay position-absolute top-50 start-0 translate-middle-y p-3"
+                        style="bottom: 60%; background-color: transparent;">
+                        <h1 class="text-dark text-start">DIVERTIDAMENTE 2</h1>
+                        <p class="text-dark text-start">DIA 26/06 NOS CINEMAS</p>
+                        <div class="text-start">
+                            <a href="#ingressos" class="btn btn-primary">Comprar agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-exemplo" class="active indicador-custom"
+                    data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" class="indicador-custom"
+                    data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" class="indicador-custom"
+                    data-bs-slide-to="2"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
